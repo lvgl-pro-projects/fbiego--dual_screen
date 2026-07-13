@@ -1,0 +1,22 @@
+<component>
+	<previews>
+		<preview width="320" height="240" style_bg_color="0xeee" />
+	</previews>
+
+	<api>
+		<!-- Add your API here here. For example 
+		<prop name="prop1" type="int" default="0" help="What is this property?"/>
+		-->
+	</api>
+
+	<styles>
+		<style name="style_base" height="50" />
+		<style name="style_knob" bg_color="0x0a57ee" />
+	</styles>
+
+	<view extends="lv_slider">
+		<!-- Add widgets/components here -->
+		<style name="style_base" />
+		<style name="style_knob" selector="knob" />
+	</view>
+</component>

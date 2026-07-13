@@ -1,0 +1,15 @@
+list(
+  APPEND
+  LV_EDITOR_PROJECT_SOURCES
+  ${CMAKE_CURRENT_LIST_DIR}/components/container/container_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/control/control_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/oled_view/oled_view_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/slider/slider_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/components/switch/switch_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/dual_screen_gen.c
+  ${CMAKE_CURRENT_LIST_DIR}/dual_screen.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/NS_Medium_24_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/fonts/NS_Medium_32_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/images/background_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/images/lvgl_logo_data.c
+  ${CMAKE_CURRENT_LIST_DIR}/screens/screen_main/screen_main_gen.c)

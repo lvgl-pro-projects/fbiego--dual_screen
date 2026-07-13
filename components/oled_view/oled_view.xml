@@ -1,0 +1,39 @@
+<component>
+	<previews>
+		<preview width="128" height="64" style_bg_color="0xeee" />
+	</previews>
+
+	<api>
+		<!-- Add your API here here. For example 
+		<prop name="prop1" type="int" default="0" help="What is this property?"/>
+		-->
+	</api>
+
+	<styles>
+		<style
+			name="style_base"
+			width="128"
+			height="64"
+			bg_color="0x000000"
+			bg_opa="255"
+			text_color="0xffffff"
+			text_font="NS_Medium_24"
+		/>
+	</styles>
+
+	<view extends="lv_obj">
+		<remove_style_all />
+		<style name="style_base" />
+
+		<lv_label bind_text="sb_time" align="top_mid">
+			<bind_flag_if_not_eq flag="hidden" subject="sb_time_view" ref_value="1" />
+		</lv_label>
+		<lv_label bind_text="sb_value" bind_text-fmt="%d%%" x="5" align="bottom_left">
+			<bind_flag_if_not_eq flag="hidden" subject="sb_value_view" ref_value="1" />
+		</lv_label>
+
+		<lv_image src="lvgl_logo" scale_x="128" scale_y="128" height="35" width="35" align="bottom_right">
+			<bind_flag_if_not_eq flag="hidden" subject="sb_logo_view" ref_value="1" />
+		</lv_image>
+	</view>
+</component>

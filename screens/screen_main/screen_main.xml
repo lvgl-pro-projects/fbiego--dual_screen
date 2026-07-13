@@ -1,0 +1,44 @@
+<screen>
+	<styles>
+		<style
+			name="style_main"
+			bg_color="0x000000"
+			bg_image_src="background"
+			bg_image_tiled="true"
+			bg_image_recolor="0x000000"
+			bg_image_recolor_opa="150"
+			pad_ver="20"
+			pad_row="0"
+			layout="flex"
+			flex_flow="column"
+			flex_main_place="space_between"
+			flex_cross_place="center"
+			flex_track_place="center"
+			text_color="0xFFFFFF"
+		/>
+	</styles>
+	<view extends="lv_obj">
+		<style name="style_main" />
+		<!-- Add your code here -->
+
+		<lv_image src="lvgl_logo" align="top_mid" y="20" />
+
+		<container width="450" height="300" align="center" style_layout="flex" flex_flow="column">
+			<control title="Show Time">
+				<switch bind_checked="sb_time_view" />
+			</control>
+			<control title="Show Logo">
+				<switch bind_checked="sb_logo_view" />
+			</control>
+			<control title="Show Value">
+				<switch bind_checked="sb_value_view" />
+			</control>
+			<control title="" style_pad_hor="40">
+				<bind_flag_if_not_eq flag="hidden" subject="sb_value_view" ref_value="1" />
+				<slider width="100%" bind_value="sb_value" />
+			</control>
+		</container>
+
+		<lv_label bind_text="sb_time" align="bottom_mid" y="-20" style_text_font="NS_Medium_32" />
+	</view>
+</screen>

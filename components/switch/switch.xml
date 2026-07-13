@@ -1,0 +1,26 @@
+<component>
+	<previews>
+		<preview width="320" height="240" style_bg_color="0xeee" />
+	</previews>
+
+	<api>
+		<!-- Add your API here here. For example 
+		<prop name="prop1" type="int" default="0" help="What is this property?"/>
+		-->
+	</api>
+
+	<styles>
+		<style name="style_base" width="90" height="50" bg_color="0xf9f9f9" />
+		<style name="style_base_checked" bg_color="0x2b55ff" />
+		<style name="style_knob" bg_color="0x2b55ff" />
+		<style name="style_knob_checked" bg_color="0xffffff" />
+	</styles>
+
+	<view extends="lv_switch">
+		<!-- Add widgets/components here -->
+		<style name="style_base" />
+		<style name="style_base_checked" selector="checked|indicator" />
+		<style name="style_knob" selector="knob" />
+		<style name="style_knob_checked" selector="knob|checked" />
+	</view>
+</component>
